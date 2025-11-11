@@ -1,0 +1,80 @@
+body {
+  font-family: "More Perfect DOS VGA";
+  margin: 0;
+
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+#phone {
+  background-color: #23293b;
+  height: 600px;
+  width: 280px;
+
+  border-top-left-radius: 50px 160px;
+  border-top-right-radius: 50px 160px;
+  border-bottom-left-radius: 36px 260px;
+  border-bottom-right-radius: 36px 260px;
+}
+
+#screen {
+  font-family: inherit;
+  font-size: 1.25rem;
+
+  color: black;
+  background-color: #769c65;
+  border: 1px solid black;
+
+  height: 160px;
+  width: 80%;
+  padding: 4px;
+  word-break: break-all;
+
+  position: relative;
+  top: 100px;
+  left: 50%;
+  translate: -50%;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  50.0001%,
+  100% {
+    opacity: 0;
+  }
+}
+
+#ibeam {
+  display: inline-block;
+  height: 1rem;
+  width: 8px;
+  background-color: black;
+  animation: blink 1s steps(1, end) infinite;
+}
+
+#ibeam.typing {
+  animation: none !important;
+}
+
+#keypad {
+  position: relative;
+  top: 120px;
+  left: 50%;
+  translate: -50%;
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+}
+
+#keypad > button {
+  height: 56px;
+  font-size: 1.25rem;
+  font-family: inherit;
+}

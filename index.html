@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.global.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="phone">
+        <div id="screen">{{ content }}{{ input }}<span id="ibeam"></span></div>
+
+        <div id="keypad">
+          <button @click="press('1')">1<br /><br /></button>
+          <button @click="press('abc2')">2<br />abc</button>
+          <button @click="press('def3')">3<br />def</button>
+
+          <button @click="press('ghi4')">4<br />ghi</button>
+          <button @click="press('jkl5')">5<br />jkl</button>
+          <button @click="press('mno6')">6<br />mno</button>
+
+          <button @click="press('pqrs7')">7<br />pqrs</button>
+          <button @click="press('tuv8')">8<br />tuv</button>
+          <button @click="press('wxyz9')">9<br />wxyz</button>
+
+          <button @click="press('*')">*</button>
+          <button @click="press('0 ')">0</button>
+          <button @click="press('#')">#</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
